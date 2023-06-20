@@ -1,0 +1,1697 @@
+{
+	"info": {
+		"_postman_id": "1816099f-40ec-437c-a703-f48b175264ac",
+		"name": "Final_Testing_A.Khudyakova",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27504081",
+		"_collection_link": "https://www.postman.com/martian-spaceship-818282/workspace/my-workspace/collection/27504081-1816099f-40ec-437c-a703-f48b175264ac?action=share&creator=27504081&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Auth admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "GB202305dc5589",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "a7c77139d4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/login",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_New_Dummie_SUCCECC",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "5e9ac6b0cdcb7c2f198d94d895c8226a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Alla",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Petrova",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "Allochka18",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "89337776655",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "female",
+							"type": "text"
+						},
+						{
+							"key": "birthDate",
+							"value": "2000-01-05",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/dummies",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"dummies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_New_Dummie_NoName",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "5e9ac6b0cdcb7c2f198d94d895c8226a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Olesya",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Ivanova",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "89212121222",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "female",
+							"type": "text"
+						},
+						{
+							"key": "birthDate",
+							"value": "2000-01-01",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/dummies",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"dummies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_New_Dummie_NoLatinica",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "5e9ac6b0cdcb7c2f198d94d895c8226a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Feofan",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Ivanov",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "Феофан",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "89242121226",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "birthDate",
+							"value": "2000-01-01",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/dummies",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"dummies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_Login_specsymb",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "5e9ac6b0cdcb7c2f198d94d895c8226a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Vasya",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Pup",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "Vas%%%%",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "89217710740",
+							"type": "text"
+						},
+						{
+							"key": "birthDate",
+							"value": "1999-01-01",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/dummies",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"dummies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_Login_short",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "5e9ac6b0cdcb7c2f198d94d895c8226a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Vasya",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Pu",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "AA",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "89040009955",
+							"type": "text"
+						},
+						{
+							"key": "birthDate",
+							"value": "1999-01-01",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/dummies",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"dummies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_New_Dummie_Long_Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "5e9ac6b0cdcb7c2f198d94d895c8226a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Rita",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Petrova",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "RittaRittaRittaRittaRittaRitta1",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "89212023311",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "female",
+							"type": "text"
+						},
+						{
+							"key": "birthDate",
+							"value": "2002-01-01",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/dummies",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"dummies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth dummie",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Unknown_fox",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "6c9b3e67d4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/login",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth dummie_wrongLogin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Unknow",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "6c9b3e67d4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/login",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth dummie_wrongPassword",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Unknown_fox",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "6c9b111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/login",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth dummie_empty_login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "6c9b3e67d4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/login",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth dummie_emptyPassword",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Unknown_fox",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/gateway/login",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"gateway",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Own_Profile",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "c404ac5087b13682b6fbcbbf598ce406",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/users/profile/9663",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile",
+						"9663"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Own_Posts_ASC_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "c404ac5087b13682b6fbcbbf598ce406",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/posts/?sort=createdAt&order=ASC&page=1",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "createdAt"
+						},
+						{
+							"key": "order",
+							"value": "ASC"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Own_Posts_ASC_1000",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "c404ac5087b13682b6fbcbbf598ce406",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/posts/?sort=createdAt&order=ASC&page=1000",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "createdAt"
+						},
+						{
+							"key": "order",
+							"value": "ASC"
+						},
+						{
+							"key": "page",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Own_Posts_BadSort",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "c404ac5087b13682b6fbcbbf598ce406",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/posts/?sort=createdOn&order=ASC&page=1",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "createdOn"
+						},
+						{
+							"key": "order",
+							"value": "ASC"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Own_Posts_BadOrder",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "c404ac5087b13682b6fbcbbf598ce406",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/posts/?order=OMG&page=1",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "createdOn",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "OMG"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Own_Posts_DESC_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "c404ac5087b13682b6fbcbbf598ce406",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/posts/?sort=createdAt&order=DESC&page=3",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "createdAt"
+						},
+						{
+							"key": "order",
+							"value": "DESC"
+						},
+						{
+							"key": "page",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Own_Posts_no_sort",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "c404ac5087b13682b6fbcbbf598ce406",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/posts/?order=DESC&page=3",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "createdAt",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "DESC"
+						},
+						{
+							"key": "page",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Own_Posts_no_order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "c404ac5087b13682b6fbcbbf598ce406",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/posts/?page=12",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "createdAt",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "DESC",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Own_Post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "c404ac5087b13682b6fbcbbf598ce406",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/posts/40822",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"posts",
+						"40822"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "createdAt",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "DESC",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "12",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OwnPost_notExist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "c404ac5087b13682b6fbcbbf598ce406",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/posts/408222",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"posts",
+						"408222"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "createdAt",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "DESC",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "12",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NotOwn_Posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "c404ac5087b13682b6fbcbbf598ce406",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/posts/?owner=notMe&sort=createdAt&order=ASC&page=1",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					],
+					"query": [
+						{
+							"key": "owner",
+							"value": "notMe"
+						},
+						{
+							"key": "sort",
+							"value": "createdAt"
+						},
+						{
+							"key": "order",
+							"value": "ASC"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NotOwn_Posts_DESC37",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "c404ac5087b13682b6fbcbbf598ce406",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/posts/?owner=notMe&sort=createdAt&order=DESC&page=37",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					],
+					"query": [
+						{
+							"key": "owner",
+							"value": "notMe"
+						},
+						{
+							"key": "sort",
+							"value": "createdAt"
+						},
+						{
+							"key": "order",
+							"value": "DESC"
+						},
+						{
+							"key": "page",
+							"value": "37"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NotOwn_Posts_Bad_Sort",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "c404ac5087b13682b6fbcbbf598ce406",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/posts/?owner=notMe&sort=createdOn&order=ASC&page=1",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					],
+					"query": [
+						{
+							"key": "owner",
+							"value": "notMe"
+						},
+						{
+							"key": "sort",
+							"value": "createdOn"
+						},
+						{
+							"key": "order",
+							"value": "ASC"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NotOwn_Posts_Bad_Order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "c404ac5087b13682b6fbcbbf598ce406",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/posts/?owner=notMe&sort=createdAt&order=OMG&page=3",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					],
+					"query": [
+						{
+							"key": "owner",
+							"value": "notMe"
+						},
+						{
+							"key": "sort",
+							"value": "createdAt"
+						},
+						{
+							"key": "order",
+							"value": "OMG"
+						},
+						{
+							"key": "page",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NotOwn_Posts_Without_Order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "c404ac5087b13682b6fbcbbf598ce406",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/posts/?owner=notMe&page=3",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					],
+					"query": [
+						{
+							"key": "owner",
+							"value": "notMe"
+						},
+						{
+							"key": "sort",
+							"value": "createdAt",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "OMG",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
